@@ -52,7 +52,7 @@ Enter these values in the app's settings to authenticate your requests.
 
 ## Privacy & Security
 
-- Your session credentials are stored securely in the macOS Keychain
+- Your session credentials are stored securely on device
 - No data is sent to any servers other than Pic Thing's official servers
 - All processing happens through the official Pic Thing API
 
