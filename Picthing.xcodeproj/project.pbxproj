@@ -6,14 +6,76 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E9162ECE2E2561B20087582A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9162ECD2E2561B20087582A /* Cocoa.framework */; };
+		E9162ED92E2561B20087582A /* PicThing Thumbnail.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E9162ECB2E2561B20087582A /* PicThing Thumbnail.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E9162EEE2E2578980087582A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E9162EED2E2577DE0087582A /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E9162ED72E2561B20087582A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9162EB12E25603A0087582A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9162ECA2E2561B20087582A;
+			remoteInfo = "PicThing Thumbnail";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E9162EDE2E2561B20087582A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E9162ED92E2561B20087582A /* PicThing Thumbnail.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E9162EB92E25603A0087582A /* Picthing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picthing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9162ECB2E2561B20087582A /* PicThing Thumbnail.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PicThing Thumbnail.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9162ECD2E2561B20087582A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E9162EED2E2577DE0087582A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E9162EDA2E2561B20087582A /* Exceptions for "PicThing Thumbnail" folder in "PicThing Thumbnail" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E9162ECA2E2561B20087582A /* PicThing Thumbnail */;
+		};
+		E9162EE42E25694E0087582A /* Exceptions for "Picthing" folder in "PicThing Thumbnail" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				clerk.swift,
+				UploadThing.swift,
+			);
+			target = E9162ECA2E2561B20087582A /* PicThing Thumbnail */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E9162EBB2E25603A0087582A /* Picthing */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E9162EE42E25694E0087582A /* Exceptions for "Picthing" folder in "PicThing Thumbnail" target */,
+			);
 			path = Picthing;
+			sourceTree = "<group>";
+		};
+		E9162ECF2E2561B20087582A /* PicThing Thumbnail */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E9162EDA2E2561B20087582A /* Exceptions for "PicThing Thumbnail" folder in "PicThing Thumbnail" target */,
+			);
+			path = "PicThing Thumbnail";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +88,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9162EC82E2561B20087582A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9162ECE2E2561B20087582A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		E9162EB02E25603A0087582A = {
 			isa = PBXGroup;
 			children = (
+				E9162EED2E2577DE0087582A /* README.md */,
 				E9162EBB2E25603A0087582A /* Picthing */,
+				E9162ECF2E2561B20087582A /* PicThing Thumbnail */,
+				E9162ECC2E2561B20087582A /* Frameworks */,
 				E9162EBA2E25603A0087582A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +114,17 @@
 			isa = PBXGroup;
 			children = (
 				E9162EB92E25603A0087582A /* Picthing.app */,
+				E9162ECB2E2561B20087582A /* PicThing Thumbnail.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E9162ECC2E2561B20087582A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9162ECD2E2561B20087582A /* Cocoa.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +137,12 @@
 				E9162EB52E25603A0087582A /* Sources */,
 				E9162EB62E25603A0087582A /* Frameworks */,
 				E9162EB72E25603A0087582A /* Resources */,
+				E9162EDE2E2561B20087582A /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E9162ED82E2561B20087582A /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E9162EBB2E25603A0087582A /* Picthing */,
@@ -69,6 +153,28 @@
 			productName = Picthing;
 			productReference = E9162EB92E25603A0087582A /* Picthing.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E9162ECA2E2561B20087582A /* PicThing Thumbnail */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9162EDB2E2561B20087582A /* Build configuration list for PBXNativeTarget "PicThing Thumbnail" */;
+			buildPhases = (
+				E9162EC72E2561B20087582A /* Sources */,
+				E9162EC82E2561B20087582A /* Frameworks */,
+				E9162EC92E2561B20087582A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E9162ECF2E2561B20087582A /* PicThing Thumbnail */,
+			);
+			name = "PicThing Thumbnail";
+			packageProductDependencies = (
+			);
+			productName = "PicThing Thumbnail";
+			productReference = E9162ECB2E2561B20087582A /* PicThing Thumbnail.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +187,9 @@
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					E9162EB82E25603A0087582A = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					E9162ECA2E2561B20087582A = {
 						CreatedOnToolsVersion = 26.0;
 					};
 				};
@@ -100,12 +209,20 @@
 			projectRoot = "";
 			targets = (
 				E9162EB82E25603A0087582A /* Picthing */,
+				E9162ECA2E2561B20087582A /* PicThing Thumbnail */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E9162EB72E25603A0087582A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9162EC92E2561B20087582A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +239,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9162EC72E2561B20087582A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9162EEE2E2578980087582A /* README.md in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E9162ED82E2561B20087582A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9162ECA2E2561B20087582A /* PicThing Thumbnail */;
+			targetProxy = E9162ED72E2561B20087582A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E9162EC22E25603C0087582A /* Debug */ = {
@@ -250,6 +383,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Picthing/Picthing.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -264,6 +399,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.thomasdye.Picthing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -281,6 +417,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Picthing/Picthing.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -295,12 +433,99 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.thomasdye.Picthing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E9162EDC2E2561B20087582A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "PicThing Thumbnail/PicThing Thumbnail.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K3S7UENN8E;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PicThing Thumbnail/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PicThing RmoveBackground";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.thomasdye.Picthing.PicThing-Thumbnail";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E9162EDD2E2561B20087582A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "PicThing Thumbnail/PicThing Thumbnail.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K3S7UENN8E;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PicThing Thumbnail/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PicThing RmoveBackground";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.thomasdye.Picthing.PicThing-Thumbnail";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -324,6 +549,15 @@
 			buildConfigurations = (
 				E9162EC52E25603C0087582A /* Debug */,
 				E9162EC62E25603C0087582A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9162EDB2E2561B20087582A /* Build configuration list for PBXNativeTarget "PicThing Thumbnail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9162EDC2E2561B20087582A /* Debug */,
+				E9162EDD2E2561B20087582A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
